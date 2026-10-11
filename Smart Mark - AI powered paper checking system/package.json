@@ -1,0 +1,7 @@
+{
+  "name": "smartmark-login",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}

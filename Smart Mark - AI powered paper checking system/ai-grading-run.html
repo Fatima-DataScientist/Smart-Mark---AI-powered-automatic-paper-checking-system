@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run AI Grading — SmartMark</title>
+  <link rel="stylesheet" href="css/ai-grading-run.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">Smart<span>Mark</span></a>
+    <p class="nav-label">MAIN</p>
+    <nav>
+      <a href="dashboard.html"><b>▦</b> Dashboard</a>
+      <a href="my-exams.html"><b>▤</b> My Exams</a>
+      <a class="active" href="create-exam.html"><b>＋</b> Create Exam</a>
+      <a href="class-selection.html"><b>▥</b> Analytics</a>
+      <a href="export-reports.html"><b>▣</b> Report Cards</a>
+    </nav>
+    <p class="nav-label account-label">ACCOUNT</p>
+    <nav>
+      <a href="#"><b>⚙</b> Settings</a>
+      <a href="#" data-logout><b>↪</b> Logout</a>
+    </nav>
+    <div class="profile"><span>PS</span><div><strong>Priya Sharma</strong><small>Teacher</small></div></div>
+  </aside>
+
+  <main class="main-content">
+    <div class="breadcrumb">Create Exam <span>/ Run AI grading</span></div>
+    <header class="page-header">
+      <h1>Run AI grading</h1>
+      <p>Review the grading pipeline before evaluating this batch of student sheets.</p>
+    </header>
+
+    <section class="exam-summary">
+      <span class="summary-icon">▣</span>
+      <div><strong>Data Structures &amp; Algorithms — Mid-Term</strong><p>30 student sheets · Answer key and marking rubrics are ready</p></div>
+      <span class="ready">✓ Ready to grade</span>
+    </section>
+
+    <section class="pipeline-card">
+      <div class="card-head"><div><h2>Grading pipeline</h2><p>SmartMark will process every sheet using the settings you have confirmed.</p></div><span class="ai-pill">✦ AI assisted</span></div>
+      <div class="steps">
+        <article class="step"><div class="step-no">1</div><div><h3>Answer similarity matching</h3><p>Compare student responses with the approved answer key.</p></div><span class="step-state">Ready</span></article>
+        <article class="step"><div class="step-no">2</div><div><h3>Apply marking scheme</h3><p>Calculate marks using your rubrics and partial-credit rules.</p></div><span class="step-state">Ready</span></article>
+        <article class="step"><div class="step-no">3</div><div><h3>Flag low-confidence results</h3><p>Send uncertain answers to your review queue for confirmation.</p></div><span class="step-state">Ready</span></article>
+      </div>
+      <div class="notice"><span>♢</span><div><strong>Your work is protected.</strong><p>If grading is interrupted, completed student evaluations are saved and the remaining sheets can be resumed.</p></div></div>
+    </section>
+
+    <section class="progress-card" id="progress-card" hidden>
+      <div><strong id="progress-title">Preparing student sheets…</strong><span id="progress-value">0%</span></div>
+      <div class="track"><i id="progress-bar"></i></div>
+      <p id="progress-copy">Starting the AI grading pipeline.</p>
+    </section>
+
+    <footer class="footer"><span>Estimated time: about 4 minutes</span><button class="btn-primary" id="run-grading">Run AI Grading <b>→</b></button></footer>
+  </main>
+  <div class="toast" role="status"></div>
+  <script src="js/ai-grading-run.js"></script>
+</body>
+</html>

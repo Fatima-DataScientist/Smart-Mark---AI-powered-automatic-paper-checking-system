@@ -1,0 +1,43 @@
+/* Shared header and footer styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.logo { display: flex; align-items: center; gap: 8px; }
+.logo img { width: auto; height: 6rem; }
+.nav-right a { font-size: 14px; font-weight: 600; color: var(--text-gray); }
+.nav-right a span { font-weight: 700; color: var(--indigo); }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border-light);
+}
+
+.footer img { width: auto; height: 4rem; }
+.footer .copyright { font-size: 12.5px; color: var(--text-gray); }
+.footer-links { display: flex; gap: 24px; font-size: 12.5px; font-weight: 500; color: var(--text-gray); }
+.footer-links a,
+.footer-links a:visited,
+.footer-links a:hover,
+.footer-links a:active {
+  color: var(--text-gray);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .navbar { padding: 20px; }
+  .footer { flex-direction: column; gap: 12px; text-align: center; }
+}
