@@ -10,7 +10,7 @@
   const manual = new Set(students.map(student => student.id));
   const toast = $('.toast'); let toastTimer;
   const say = message => { toast.textContent = message; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 3300); };
-  $('[data-logout]').addEventListener('click', () => { localStorage.removeItem(sessionKey); localStorage.removeItem('smartmark-demo-name'); location.href = 'smartmark-landing-page%20(2).html'; });
+  $('[data-logout]').addEventListener('click', () => { localStorage.removeItem(sessionKey); localStorage.removeItem('smartmark-demo-name'); location.href = 'login.html'; });
 
   const selectedStudents = () => recipientMode === 'flagged' ? students.filter(student => student.flagged) : recipientMode === 'manual' ? students.filter(student => manual.has(student.id)) : students;
   const fileSafe = student => `${student.name.replace(/\s+/g, '_')}_Midterm_ReportCard`;

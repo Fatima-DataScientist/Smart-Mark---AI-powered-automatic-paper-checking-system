@@ -6,5 +6,5 @@ if (localStorage.getItem('smartmark-demo-session') !== 'active') {
 document.getElementById('logout-button').addEventListener('click', () => {
   localStorage.removeItem('smartmark-demo-session');
   localStorage.removeItem('smartmark-demo-name');
-  window.location.href = 'smartmark-landing-page%20(2).html';
+  window.location.href = 'login.html';
 });

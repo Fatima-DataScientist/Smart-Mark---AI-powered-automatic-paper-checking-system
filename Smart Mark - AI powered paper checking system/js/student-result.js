@@ -1,4 +1,4 @@
-if(localStorage.getItem('smartmark-demo-session')!=='active')window.location.replace('login.html');document.querySelector('[data-logout]').onclick=()=>{localStorage.clear();location.href='smartmark-landing-page%20(2).html'};const saved=localStorage.getItem('smartmark-final-score');if(saved)document.getElementById('score').innerHTML=`${saved}<span>/15</span>`;document.getElementById('print').onclick=()=>window.print();
+if(localStorage.getItem('smartmark-demo-session')!=='active')window.location.replace('login.html');document.querySelector('[data-logout]').onclick=()=>{localStorage.clear();location.href='login.html'};const saved=localStorage.getItem('smartmark-final-score');if(saved)document.getElementById('score').innerHTML=`${saved}<span>/15</span>`;document.getElementById('print').onclick=()=>window.print();
 
 const backToExamsLink = document.querySelector('header > a');
 window.addEventListener('beforeprint', () => { backToExamsLink.hidden = true; });
